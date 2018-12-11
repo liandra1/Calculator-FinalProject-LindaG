@@ -22,7 +22,7 @@ Random r = new Random();
 			second=r.nextDouble()*6;
 			oracle=first+second;
 
-			TestCase.assertEquals(cb.add(first, second), oracle);
+			assertEquals(cb.add(first, second), oracle, 0);
 		}
 	}
 	
@@ -33,7 +33,7 @@ Random r = new Random();
 			second=r.nextDouble()*6;
 			oracle=first-second;
 
-			TestCase.assertEquals(cb.sub(first, second), oracle);
+			assertEquals(cb.sub(first, second), oracle, 0);
 		}
 	}
 
@@ -44,7 +44,7 @@ Random r = new Random();
 			second=r.nextDouble()*6;
 			oracle=first*second;
 
-			TestCase.assertEquals(cb.mult(first, second), oracle);
+			assertEquals(cb.mult(first, second), oracle, 0);
 		}
 	}
 	
@@ -55,7 +55,7 @@ Random r = new Random();
 			second=r.nextDouble()*6;
 			oracle=first/second;
 
-			TestCase.assertEquals(cb.div(first, second), oracle);
+			assertEquals(cb.div(first, second), oracle, 0);
 		}
 	}
 
@@ -66,7 +66,7 @@ Random r = new Random();
 			second=r.nextDouble()*6;
 			oracle=first%second;
 
-			TestCase.assertEquals(cb.modulus(first, second), oracle);
+			assertEquals(cb.modulus(first, second), oracle, 0);
 		}
 	}
 }

@@ -1,7 +1,17 @@
 package Calculator_Linda.Calculator_Linda;
 
+/**
+ * 
+ * Interface ICalcAdv (Kalkylator Avancerade funktioner)
+ * Metodlista för den avancerade delen av Kalkylatorn
+ * 
+ * 
+ * @author linda
+ * @version 1.0
+ */
+
 public interface ICalcAdv {
-	
+
 	public double pi();
 	public double tenX(double tio);
 	public double sqa(double x);

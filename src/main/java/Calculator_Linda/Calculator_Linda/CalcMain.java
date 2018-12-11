@@ -2,6 +2,13 @@ package Calculator_Linda.Calculator_Linda;
 
 import java.awt.EventQueue;
 
+/**
+ * Main-klassen i Kalkylatorn
+ * 
+ * @author linda
+ * @version 1.0
+ */
+
 public class CalcMain {
 
 	CalcJFrame frame = new CalcJFrame();

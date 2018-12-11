@@ -10,19 +10,68 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
+/**
+ * Klass CalcJFrame - GUI-klassen i kalkylatorn
+ * Detta är den grafiska delen av kalkylatorn.
+ * Här sparas parametrarna och skickas iväg till de olika klasserna för att sedan presentera ett resultat.
+ * Resultatet presenteras som en double och har en begränsning på två decimaler.
+ * 
+ * 
+ * @author linda
+ *
+ */
 
 public class CalcJFrame {
+	
+	/**
+	 * Objekt av klassen CalcBasic skapas.
+	 * 
+	 */
 	CalcBasic bas = new CalcBasic();
+	
+	/**
+	 * Objekt av klassen CalcAdv skapas.
+	 */
 	CalcAdv adv = new CalcAdv();
 
 	JFrame frmLindasKalkylator;
+	
+	/**
+	 * Objekt i form av ett textfält för presentation av input av värdena first och second, 
+	 * samt output av resultatet av uträkningen.
+	 * 
+	 */
 	private JTextField textField;
 	
+	/**
+	 * double first : inparameter ett.
+	 * @param first : värdet av första värdet i double.
+	 */
 	double first;
+	/**
+	 * double second : inparameter två.
+	 * @param second : värdet av andra värdet i double.
+	 */
 	double second;
+	/**
+	 * double sum : resultatet i en double. 
+	 * @param sum : resultatet av värdena i en double.
+	 */
 	double sum;
+	/**
+	 * double pi : värdet PI.
+	 * @param pi : tar emot värdet av PI i en double.
+	 */
 	double pi;
+	/**
+	 * String operations : anger vilken typ av metod/operation som skall utföras
+	 * @param operations : sparar och skickar vilken typ av metod/operation som skall användas i klasserna i en String.
+	 */
 	String operations;
+	/**
+	 * String svar : svar presenteras i textfältet.
+	 * @param svar : svaret omvandlas till en String för att presenteras i textfältet. 
+	 */
 	String svar;
 	
 	public CalcJFrame() {
@@ -36,7 +85,7 @@ public class CalcJFrame {
 		frmLindasKalkylator.setBounds(100, 100, 463, 300);
 		frmLindasKalkylator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmLindasKalkylator.getContentPane().setLayout(null);
-
+		
 		textField = new JTextField();
 		textField.setFont(new Font("SansSerif", Font.PLAIN, 14));
 		textField.setHorizontalAlignment(SwingConstants.RIGHT);
