@@ -254,11 +254,17 @@ public class CalcJFrame {
 						svar = String.format("%.2f", bas.mult(first, second));
 						textField.setText(svar);
 					} else if (operations == "/") {
-						svar = String.format("%.2f", bas.div(first, second));
-						textField.setText(svar);
+						if (second == 0)
+								JOptionPane.showMessageDialog(null, "Felmeddelande! Ett tal kan inte delas med 0");
+						else{
+							svar = String.format("%.2f", bas.div(first, second));
+							textField.setText(svar);}
 					} else if (operations == "%") {
-						svar = String.format("%.2f", bas.modulus(first, second));
-						textField.setText(svar);
+						if (second == 0)
+							JOptionPane.showMessageDialog(null, "Felmeddelande! Ett tal kan inte delas med 0");
+						else {
+							svar = String.format("%.2f", bas.modulus(first, second));
+							textField.setText(svar);}
 					}		
 		        }
 		        catch (Exception d){

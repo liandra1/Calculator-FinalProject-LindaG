@@ -1,4 +1,6 @@
 package Calculator_Linda.Calculator_Linda;
+
+
 /**
  * 
  * Klass CalcBasic (Kalkylator Enkel)
@@ -61,8 +63,8 @@ public class CalcBasic implements ICalcBasic {
 	 */
 	@Override
 	public double div(double first, double second) {
-		double sum = first/second;
-		return sum;
+			double sum = first/second;
+			return sum;
 	}
 
 	/**

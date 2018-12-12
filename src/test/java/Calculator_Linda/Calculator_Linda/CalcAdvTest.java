@@ -3,6 +3,7 @@ package Calculator_Linda.Calculator_Linda;
 import static org.junit.Assert.*;
 
 import java.util.Random;
+import java.util.logging.Logger;
 
 import org.junit.Test;
 
@@ -10,10 +11,23 @@ import junit.framework.TestCase;
 
 public class CalcAdvTest {
 	CalcAdv ca = new CalcAdv();
+	public static final Logger LOG = Logger.getLogger(CalcAdv.class.getName());
 	double first;
 	double oracle;
 	Random r = new Random();
 
+	
+	@Test
+	public void testPi() {
+		for (int i = 0; i < 50; i++) {	
+			
+			oracle=Math.PI;
+
+			assertEquals(ca.pi(), oracle, 0);
+			LOG.info("Testar pi-metoden. Returnerar Pi "+oracle);
+		}
+	}
+	
 	@Test
 	public void testTenX() {
 		for (int i = 0; i < 50; i++) {	
@@ -26,6 +40,7 @@ public class CalcAdvTest {
 			oracle=tio;
 
 			assertEquals(ca.tenX(first), oracle, 0);
+			LOG.info("Testar tenX-metoden. Tio upphöjt i "+first+" = "+oracle);
 		}
 	}
 
@@ -36,6 +51,7 @@ public class CalcAdvTest {
 			oracle=Math.sqrt(first);
 
 			assertEquals(ca.sqa(first), oracle, 0);
+			LOG.info("Testar sqa-metoden. Roten ur "+first+" = "+oracle);
 		}
 		
 		
@@ -48,6 +64,7 @@ public class CalcAdvTest {
 			oracle=first*first;
 
 			assertEquals(ca.x2(first), oracle, 0);
+			LOG.info("Testar x2-metoden. "+first+" upphöjt i två = "+oracle);
 		}
 	}
 
@@ -59,6 +76,7 @@ public class CalcAdvTest {
 			oracle=Math.sin(oracle);
 
 			assertEquals(ca.sin(first), oracle, 0);
+			LOG.info("Testar sin-metoden. Sinus "+first+" = "+oracle);
 		}
 	}
 
@@ -70,6 +88,7 @@ public class CalcAdvTest {
 			oracle=Math.cos(oracle);
 
 			assertEquals(ca.cos(first), oracle, 0);
+			LOG.info("Testar cos-metoden. Cosinus "+first+" = "+oracle);
 		}
 	}
 
@@ -81,6 +100,7 @@ public class CalcAdvTest {
 			oracle=Math.tan(oracle);
 
 			assertEquals(ca.tan(first), oracle, 0);
+			LOG.info("Testar tan-metoden. Tangens "+first+" = "+oracle);
 		}
 	}
 

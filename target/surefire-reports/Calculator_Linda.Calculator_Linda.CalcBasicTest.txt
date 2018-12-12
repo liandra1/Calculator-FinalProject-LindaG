@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Calculator_Linda.Calculator_Linda.CalcBasicTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.019 s - in Calculator_Linda.Calculator_Linda.CalcBasicTest
