@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalcJFrame.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Calculator-Linda</a> &gt; <a href="index.source.html" class="el_package">Calculator_Linda.Calculator_Linda</a> &gt; <span class="el_source">CalcJFrame.java</span></div><h1>CalcJFrame.java</h1><pre class="source lang-java linenums">package Calculator_Linda.Calculator_Linda;
+
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+/**
+ * Klass CalcJFrame - GUI-klassen i kalkylatorn
+ * Detta är den grafiska delen av kalkylatorn.
+ * Här sparas parametrarna och skickas iväg till de olika klasserna för att sedan presentera ett resultat.
+ * Resultatet presenteras som en double och har en begränsning på två decimaler.
+ * 
+ * 
+ * @author linda
+ *
+ */
+
+public class CalcJFrame {
+	
+	/**
+	 * Objekt av klassen CalcBasic skapas.
+	 * 
+	 */
+<span class="nc" id="L30">	CalcBasic bas = new CalcBasic();</span>
+	
+	/**
+	 * Objekt av klassen CalcAdv skapas.
+	 */
+<span class="nc" id="L35">	CalcAdv adv = new CalcAdv();</span>
+
+	JFrame frmLindasKalkylator;
+	
+	/**
+	 * Objekt i form av ett textfält för presentation av input av värdena first och second, 
+	 * samt output av resultatet av uträkningen.
+	 * 
+	 */
+	private JTextField textField;
+	
+	/**
+	 * double first : inparameter ett.
+	 * @param first : värdet av första värdet i double.
+	 */
+	double first;
+	/**
+	 * double second : inparameter två.
+	 * @param second : värdet av andra värdet i double.
+	 */
+	double second;
+	/**
+	 * double sum : resultatet i en double. 
+	 * @param sum : resultatet av värdena i en double.
+	 */
+	double sum;
+	/**
+	 * double pi : värdet PI.
+	 * @param pi : tar emot värdet av PI i en double.
+	 */
+	double pi;
+	/**
+	 * String operations : anger vilken typ av metod/operation som skall utföras
+	 * @param operations : sparar och skickar vilken typ av metod/operation som skall användas i klasserna i en String.
+	 */
+	String operations;
+	/**
+	 * String svar : svar presenteras i textfältet.
+	 * @param svar : svaret omvandlas till en String för att presenteras i textfältet. 
+	 */
+	String svar;
+	
+<span class="nc" id="L77">	public CalcJFrame() {</span>
+<span class="nc" id="L78">		initialize();</span>
+		
+<span class="nc" id="L80">	}</span>
+	
+	private void initialize() {
+<span class="nc" id="L83">		frmLindasKalkylator = new JFrame();</span>
+<span class="nc" id="L84">		frmLindasKalkylator.setTitle(&quot;Lindas Kalkylator&quot;);</span>
+<span class="nc" id="L85">		frmLindasKalkylator.setBounds(100, 100, 463, 300);</span>
+<span class="nc" id="L86">		frmLindasKalkylator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L87">		frmLindasKalkylator.getContentPane().setLayout(null);</span>
+		
+<span class="nc" id="L89">		textField = new JTextField();</span>
+<span class="nc" id="L90">		textField.setFont(new Font(&quot;SansSerif&quot;, Font.PLAIN, 14));</span>
+<span class="nc" id="L91">		textField.setHorizontalAlignment(SwingConstants.RIGHT);</span>
+<span class="nc" id="L92">		textField.setBounds(10, 11, 261, 39);</span>
+<span class="nc" id="L93">		frmLindasKalkylator.getContentPane().add(textField);</span>
+<span class="nc" id="L94">		textField.setColumns(10);</span>
+
+<span class="nc" id="L96">		final JButton btn_7 = new JButton(&quot;7&quot;);</span>
+<span class="nc" id="L97">		btn_7.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent arg0) {
+<span class="nc" id="L99">				String EnterNumber = textField.getText() + btn_7.getText();</span>
+<span class="nc" id="L100">				textField.setText(EnterNumber);</span>
+<span class="nc" id="L101">			}</span>
+		});
+<span class="nc" id="L103">		btn_7.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 17));</span>
+<span class="nc" id="L104">		btn_7.setBounds(10, 61, 43, 39);</span>
+<span class="nc" id="L105">		frmLindasKalkylator.getContentPane().add(btn_7);</span>
+
+<span class="nc" id="L107">		final JButton btn_8 = new JButton(&quot;8&quot;);</span>
+<span class="nc" id="L108">		btn_8.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent arg0) {
+<span class="nc" id="L110">				String EnterNumber = textField.getText() + btn_8.getText();</span>
+<span class="nc" id="L111">				textField.setText(EnterNumber);</span>
+<span class="nc" id="L112">			}</span>
+		});
+<span class="nc" id="L114">		btn_8.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 17));</span>
+<span class="nc" id="L115">		btn_8.setBounds(60, 61, 43, 39);</span>
+<span class="nc" id="L116">		frmLindasKalkylator.getContentPane().add(btn_8);</span>
+
+<span class="nc" id="L118">		final JButton btn_9 = new JButton(&quot;9&quot;);</span>
+<span class="nc" id="L119">		btn_9.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent arg0) {
+<span class="nc" id="L121">				String EnterNumber = textField.getText() + btn_9.getText();</span>
+<span class="nc" id="L122">				textField.setText(EnterNumber);</span>
+<span class="nc" id="L123">			}</span>
+		});
+<span class="nc" id="L125">		btn_9.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 17));</span>
+<span class="nc" id="L126">		btn_9.setBounds(110, 61, 43, 39);</span>
+<span class="nc" id="L127">		frmLindasKalkylator.getContentPane().add(btn_9);</span>
+
+<span class="nc" id="L129">		final JButton btn_4 = new JButton(&quot;4&quot;);</span>
+<span class="nc" id="L130">		btn_4.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent arg0) {
+<span class="nc" id="L132">				String EnterNumber = textField.getText() + btn_4.getText();</span>
+<span class="nc" id="L133">				textField.setText(EnterNumber);</span>
+<span class="nc" id="L134">			}</span>
+		});
+<span class="nc" id="L136">		btn_4.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 17));</span>
+<span class="nc" id="L137">		btn_4.setBounds(10, 107, 43, 39);</span>
+<span class="nc" id="L138">		frmLindasKalkylator.getContentPane().add(btn_4);</span>
+
+<span class="nc" id="L140">		final JButton btn_5 = new JButton(&quot;5&quot;);</span>
+<span class="nc" id="L141">		btn_5.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L143">				String EnterNumber = textField.getText() + btn_5.getText();</span>
+<span class="nc" id="L144">				textField.setText(EnterNumber);</span>
+<span class="nc" id="L145">			}</span>
+		});
+<span class="nc" id="L147">		btn_5.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 17));</span>
+<span class="nc" id="L148">		btn_5.setBounds(60, 107, 43, 39);</span>
+<span class="nc" id="L149">		frmLindasKalkylator.getContentPane().add(btn_5);</span>
+
+<span class="nc" id="L151">		final JButton btn_6 = new JButton(&quot;6&quot;);</span>
+<span class="nc" id="L152">		btn_6.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L154">				String EnterNumber = textField.getText() + btn_6.getText();</span>
+<span class="nc" id="L155">				textField.setText(EnterNumber);</span>
+<span class="nc" id="L156">			}</span>
+		});
+<span class="nc" id="L158">		btn_6.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 17));</span>
+<span class="nc" id="L159">		btn_6.setBounds(110, 107, 43, 39);</span>
+<span class="nc" id="L160">		frmLindasKalkylator.getContentPane().add(btn_6);</span>
+
+<span class="nc" id="L162">		final JButton btn_1 = new JButton(&quot;1&quot;);</span>
+<span class="nc" id="L163">		btn_1.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L165">				String EnterNumber = textField.getText() + btn_1.getText();</span>
+<span class="nc" id="L166">				textField.setText(EnterNumber);</span>
+<span class="nc" id="L167">			}</span>
+		});
+<span class="nc" id="L169">		btn_1.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 17));</span>
+<span class="nc" id="L170">		btn_1.setBounds(10, 157, 43, 39);</span>
+<span class="nc" id="L171">		frmLindasKalkylator.getContentPane().add(btn_1);</span>
+
+<span class="nc" id="L173">		final JButton btn_2 = new JButton(&quot;2&quot;);</span>
+<span class="nc" id="L174">		btn_2.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L176">				String EnterNumber = textField.getText() + btn_2.getText();</span>
+<span class="nc" id="L177">				textField.setText(EnterNumber);</span>
+<span class="nc" id="L178">			}</span>
+		});
+<span class="nc" id="L180">		btn_2.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 17));</span>
+<span class="nc" id="L181">		btn_2.setBounds(60, 157, 43, 39);</span>
+<span class="nc" id="L182">		frmLindasKalkylator.getContentPane().add(btn_2);</span>
+
+<span class="nc" id="L184">		final JButton btn_3 = new JButton(&quot;3&quot;);</span>
+<span class="nc" id="L185">		btn_3.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L187">				String EnterNumber = textField.getText() + btn_3.getText();</span>
+<span class="nc" id="L188">				textField.setText(EnterNumber);</span>
+<span class="nc" id="L189">			}</span>
+		});
+<span class="nc" id="L191">		btn_3.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 17));</span>
+<span class="nc" id="L192">		btn_3.setBounds(110, 157, 43, 39);</span>
+<span class="nc" id="L193">		frmLindasKalkylator.getContentPane().add(btn_3);</span>
+
+<span class="nc" id="L195">		final JButton btn_0 = new JButton(&quot;0&quot;);</span>
+<span class="nc" id="L196">		btn_0.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L198">				String EnterNumber = textField.getText() + btn_0.getText();</span>
+<span class="nc" id="L199">				textField.setText(EnterNumber);</span>
+<span class="nc" id="L200">			}</span>
+		});
+<span class="nc" id="L202">		btn_0.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 17));</span>
+<span class="nc" id="L203">		btn_0.setBounds(60, 207, 43, 39);</span>
+<span class="nc" id="L204">		frmLindasKalkylator.getContentPane().add(btn_0);</span>
+
+<span class="nc" id="L206">		final JButton btn_komma = new JButton(&quot;.&quot;);</span>
+<span class="nc" id="L207">		btn_komma.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc bnc" id="L209" title="All 2 branches missed.">				if (!textField.getText().contains(&quot;.&quot;)) {</span>
+<span class="nc" id="L210">					textField.setText(textField.getText() + btn_komma.getText());</span>
+				}
+<span class="nc" id="L212">			}</span>
+		});
+<span class="nc" id="L214">		btn_komma.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 18));</span>
+<span class="nc" id="L215">		btn_komma.setBounds(110, 207, 43, 39);</span>
+<span class="nc" id="L216">		frmLindasKalkylator.getContentPane().add(btn_komma);</span>
+		
+		
+<span class="nc" id="L219">		JButton btn_plusminus = new JButton(&quot;\u00B1&quot;);</span>
+<span class="nc" id="L220">		btn_plusminus.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L223">					double ops = Double.parseDouble(String.valueOf(textField.getText()));</span>
+<span class="nc" id="L224">					ops = ops * (-1);</span>
+<span class="nc" id="L225">					textField.setText(String.valueOf(ops));		</span>
+		        }
+<span class="nc" id="L227">		        catch (Exception d){</span>
+<span class="nc" id="L228">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L229">		        }</span>
+				
+<span class="nc" id="L231">			}</span>
+		});
+<span class="nc" id="L233">		btn_plusminus.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 13));</span>
+<span class="nc" id="L234">		btn_plusminus.setBounds(10, 207, 43, 39);</span>
+<span class="nc" id="L235">		frmLindasKalkylator.getContentPane().add(btn_plusminus);</span>
+		
+
+<span class="nc" id="L238">		JButton btn_likamed = new JButton(&quot;=&quot;);</span>
+<span class="nc" id="L239">		btn_likamed.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				
+				try{
+					String svar;
+<span class="nc" id="L244">					second = Double.parseDouble(textField.getText());</span>
+					
+
+<span class="nc bnc" id="L247" title="All 2 branches missed.">					if (operations == &quot;+&quot;) {</span>
+<span class="nc" id="L248">						svar = String.format(&quot;%.2f&quot;, bas.add(first, second));</span>
+<span class="nc" id="L249">						textField.setText(svar);</span>
+<span class="nc bnc" id="L250" title="All 2 branches missed.">					} else if (operations == &quot;-&quot;) {</span>
+<span class="nc" id="L251">						svar = String.format(&quot;%.2f&quot;, bas.sub(first, second));</span>
+<span class="nc" id="L252">						textField.setText(svar);</span>
+<span class="nc bnc" id="L253" title="All 2 branches missed.">					} else if (operations == &quot;*&quot;) {</span>
+<span class="nc" id="L254">						svar = String.format(&quot;%.2f&quot;, bas.mult(first, second));</span>
+<span class="nc" id="L255">						textField.setText(svar);</span>
+<span class="nc bnc" id="L256" title="All 2 branches missed.">					} else if (operations == &quot;/&quot;) {</span>
+<span class="nc bnc" id="L257" title="All 2 branches missed.">						if (second == 0)</span>
+<span class="nc" id="L258">								JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Ett tal kan inte delas med 0&quot;);</span>
+						else{
+<span class="nc" id="L260">							svar = String.format(&quot;%.2f&quot;, bas.div(first, second));</span>
+<span class="nc" id="L261">							textField.setText(svar);}</span>
+<span class="nc bnc" id="L262" title="All 2 branches missed.">					} else if (operations == &quot;%&quot;) {</span>
+<span class="nc bnc" id="L263" title="All 2 branches missed.">						if (second == 0)</span>
+<span class="nc" id="L264">							JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Ett tal kan inte delas med 0&quot;);</span>
+						else {
+<span class="nc" id="L266">							svar = String.format(&quot;%.2f&quot;, bas.modulus(first, second));</span>
+<span class="nc" id="L267">							textField.setText(svar);}</span>
+					}		
+		        }
+<span class="nc" id="L270">		        catch (Exception d){</span>
+<span class="nc" id="L271">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L272">		        }</span>
+				
+<span class="nc" id="L274">			}</span>
+		});
+<span class="nc" id="L276">		btn_likamed.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 18));</span>
+<span class="nc" id="L277">		btn_likamed.setBounds(159, 207, 112, 39);</span>
+<span class="nc" id="L278">		frmLindasKalkylator.getContentPane().add(btn_likamed);</span>
+		
+
+<span class="nc" id="L281">		JButton btn_plus = new JButton(&quot;+&quot;);</span>
+<span class="nc" id="L282">		btn_plus.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L285">					first= Double.parseDouble(textField.getText());</span>
+<span class="nc" id="L286">					textField.setText(&quot;&quot;);</span>
+<span class="nc" id="L287">					operations = &quot;+&quot;;			</span>
+		        }
+<span class="nc" id="L289">		        catch (Exception d){</span>
+<span class="nc" id="L290">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L291">		        }</span>
+				
+<span class="nc" id="L293">			}</span>
+		});
+<span class="nc" id="L295">		btn_plus.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 18));</span>
+<span class="nc" id="L296">		btn_plus.setBounds(159, 157, 52, 39);</span>
+<span class="nc" id="L297">		frmLindasKalkylator.getContentPane().add(btn_plus);</span>
+		
+		
+<span class="nc" id="L300">		JButton btn_minus = new JButton(&quot;-&quot;);</span>
+<span class="nc" id="L301">		btn_minus.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L304">					first= Double.parseDouble(textField.getText());</span>
+<span class="nc" id="L305">					textField.setText(&quot;&quot;);</span>
+<span class="nc" id="L306">					operations = &quot;-&quot;;			</span>
+		        }
+<span class="nc" id="L308">		        catch (Exception d){</span>
+<span class="nc" id="L309">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L310">		        }</span>
+				
+<span class="nc" id="L312">			}</span>
+		});
+<span class="nc" id="L314">		btn_minus.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 18));</span>
+<span class="nc" id="L315">		btn_minus.setBounds(219, 157, 52, 39);</span>
+<span class="nc" id="L316">		frmLindasKalkylator.getContentPane().add(btn_minus);</span>
+
+<span class="nc" id="L318">		JButton btn_multip = new JButton(&quot;x&quot;);</span>
+<span class="nc" id="L319">		btn_multip.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L322">					first= Double.parseDouble(textField.getText());</span>
+<span class="nc" id="L323">					textField.setText(&quot;&quot;);</span>
+<span class="nc" id="L324">					operations = &quot;*&quot;;			</span>
+		        }
+<span class="nc" id="L326">		        catch (Exception d){</span>
+<span class="nc" id="L327">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L328">		        }</span>
+				
+<span class="nc" id="L330">			}</span>
+		});
+<span class="nc" id="L332">		btn_multip.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 18));</span>
+<span class="nc" id="L333">		btn_multip.setBounds(159, 107, 52, 39);</span>
+<span class="nc" id="L334">		frmLindasKalkylator.getContentPane().add(btn_multip);</span>
+		
+		
+<span class="nc" id="L337">		JButton btn_divi = new JButton(&quot;\u00F7&quot;);</span>
+<span class="nc" id="L338">		btn_divi.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L341">					first= Double.parseDouble(textField.getText());</span>
+<span class="nc" id="L342">					textField.setText(&quot;&quot;);</span>
+<span class="nc" id="L343">					operations = &quot;/&quot;;			</span>
+		        }
+<span class="nc" id="L345">		        catch (Exception d){</span>
+<span class="nc" id="L346">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L347">		        }</span>
+<span class="nc" id="L348">			}</span>
+		});
+<span class="nc" id="L350">		btn_divi.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 18));</span>
+<span class="nc" id="L351">		btn_divi.setBounds(219, 107, 52, 39);</span>
+<span class="nc" id="L352">		frmLindasKalkylator.getContentPane().add(btn_divi);</span>
+		
+		
+<span class="nc" id="L355">		JButton btn_back = new JButton(&quot;\u2190&quot;);</span>
+<span class="nc" id="L356">		btn_back.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L358">				String backs = null;</span>
+
+<span class="nc bnc" id="L360" title="All 2 branches missed.">				if (textField.getText().length() &gt; 0) {</span>
+<span class="nc" id="L361">					StringBuilder s = new StringBuilder(textField.getText());</span>
+<span class="nc" id="L362">					s.deleteCharAt(textField.getText().length() - 1);</span>
+<span class="nc" id="L363">					backs = s.toString();</span>
+<span class="nc" id="L364">					textField.setText(backs);</span>
+				}
+<span class="nc" id="L366">			}</span>
+		});
+<span class="nc" id="L368">		btn_back.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 18));</span>
+<span class="nc" id="L369">		btn_back.setBounds(159, 61, 52, 39);</span>
+<span class="nc" id="L370">		frmLindasKalkylator.getContentPane().add(btn_back);</span>
+		
+		
+<span class="nc" id="L373">		JButton btn_c = new JButton(&quot;C&quot;);</span>
+<span class="nc" id="L374">		btn_c.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L376">				textField.setText(null);</span>
+<span class="nc" id="L377">			}</span>
+		});
+<span class="nc" id="L379">		btn_c.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 18));</span>
+<span class="nc" id="L380">		btn_c.setBounds(219, 61, 52, 39);</span>
+<span class="nc" id="L381">		frmLindasKalkylator.getContentPane().add(btn_c);</span>
+		
+		
+<span class="nc" id="L384">		JButton btn_sin = new JButton(&quot;sin&quot;);</span>
+<span class="nc" id="L385">		btn_sin.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L388">					double x = Double.parseDouble(String.valueOf(textField.getText()));</span>
+<span class="nc" id="L389">					textField.setText(String.valueOf(adv.sin(x)));		</span>
+		        }
+<span class="nc" id="L391">		        catch (Exception d){</span>
+<span class="nc" id="L392">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L393">		        }</span>
+				
+<span class="nc" id="L395">			}</span>
+		});
+<span class="nc" id="L397">		btn_sin.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 12));</span>
+<span class="nc" id="L398">		btn_sin.setBounds(323, 63, 52, 39);</span>
+<span class="nc" id="L399">		frmLindasKalkylator.getContentPane().add(btn_sin);</span>
+		
+		
+<span class="nc" id="L402">		JButton btn_cos = new JButton(&quot;cos&quot;);</span>
+<span class="nc" id="L403">		btn_cos.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L406">					double x = Double.parseDouble(String.valueOf(textField.getText()));</span>
+<span class="nc" id="L407">					textField.setText(String.valueOf(adv.cos(x)));	</span>
+		        }
+<span class="nc" id="L409">		        catch (Exception d){</span>
+<span class="nc" id="L410">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L411">		        }</span>
+				
+<span class="nc" id="L413">			}</span>
+		});
+<span class="nc" id="L415">		btn_cos.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 12));</span>
+<span class="nc" id="L416">		btn_cos.setBounds(323, 109, 52, 39);</span>
+<span class="nc" id="L417">		frmLindasKalkylator.getContentPane().add(btn_cos);</span>
+		
+		
+<span class="nc" id="L420">		JButton btn_tan = new JButton(&quot;tan&quot;);</span>
+<span class="nc" id="L421">		btn_tan.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L424">					double x = Double.parseDouble(String.valueOf(textField.getText()));</span>
+<span class="nc" id="L425">					textField.setText(String.valueOf(adv.tan(x)));</span>
+		        }
+<span class="nc" id="L427">		        catch (Exception d){</span>
+<span class="nc" id="L428">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L429">		        }</span>
+				
+<span class="nc" id="L431">			}</span>
+		});
+<span class="nc" id="L433">		btn_tan.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 12));</span>
+<span class="nc" id="L434">		btn_tan.setBounds(323, 159, 52, 39);</span>
+<span class="nc" id="L435">		frmLindasKalkylator.getContentPane().add(btn_tan);</span>
+		
+		
+<span class="nc" id="L438">		JButton btn_modulus = new JButton(&quot;%&quot;);</span>
+<span class="nc" id="L439">		btn_modulus.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L442">					first = Double.parseDouble(textField.getText());</span>
+<span class="nc" id="L443">					textField.setText(&quot;&quot;);</span>
+<span class="nc" id="L444">					operations = &quot;%&quot;;</span>
+		        }
+<span class="nc" id="L446">		        catch (Exception d){</span>
+<span class="nc" id="L447">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L448">		        }</span>
+				
+<span class="nc" id="L450">			}</span>
+		});
+<span class="nc" id="L452">		btn_modulus.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 11));</span>
+<span class="nc" id="L453">		btn_modulus.setBounds(323, 207, 52, 39);</span>
+<span class="nc" id="L454">		frmLindasKalkylator.getContentPane().add(btn_modulus);</span>
+		
+		
+<span class="nc" id="L457">		JButton btn_pi = new JButton(&quot;\u03C0&quot;);</span>
+<span class="nc" id="L458">		btn_pi.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L460">				textField.setText(Double.toString(adv.pi()));</span>
+<span class="nc" id="L461">			}</span>
+		});
+<span class="nc" id="L463">		btn_pi.setFont(new Font(&quot;Sylfaen&quot;, Font.PLAIN, 20));</span>
+<span class="nc" id="L464">		btn_pi.setBounds(385, 61, 52, 39);</span>
+<span class="nc" id="L465">		frmLindasKalkylator.getContentPane().add(btn_pi);</span>
+		
+		
+<span class="nc" id="L468">		JButton btn_rot = new JButton(&quot;\u221A&quot;);</span>
+<span class="nc" id="L469">		btn_rot.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L472">					double x = Double.parseDouble(textField.getText());</span>
+<span class="nc" id="L473">					textField.setText(Double.toString(adv.sqa(x)));</span>
+		        }
+<span class="nc" id="L475">		        catch (Exception d){</span>
+<span class="nc" id="L476">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L477">		        }</span>
+				
+<span class="nc" id="L479">			}</span>
+		});
+<span class="nc" id="L481">		btn_rot.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 15));</span>
+<span class="nc" id="L482">		btn_rot.setBounds(385, 108, 52, 39);</span>
+<span class="nc" id="L483">		frmLindasKalkylator.getContentPane().add(btn_rot);</span>
+		
+		
+<span class="nc" id="L486">		JButton btnX = new JButton(&quot;x\u00B2&quot;);</span>
+<span class="nc" id="L487">		btnX.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L490">					double x = Double.parseDouble(String.valueOf(textField.getText()));</span>
+<span class="nc" id="L491">					textField.setText(String.valueOf(adv.x2(x)));</span>
+		        }
+<span class="nc" id="L493">		        catch (Exception d){</span>
+<span class="nc" id="L494">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L495">		        }</span>
+				
+<span class="nc" id="L497">			}</span>
+		});
+<span class="nc" id="L499">		btnX.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 16));</span>
+<span class="nc" id="L500">		btnX.setBounds(385, 158, 52, 39);</span>
+<span class="nc" id="L501">		frmLindasKalkylator.getContentPane().add(btnX);</span>
+		
+		
+<span class="nc" id="L504">		JButton btn_tio = new JButton(&quot;10\u02DF&quot;);</span>
+<span class="nc" id="L505">		btn_tio.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+				try{
+<span class="nc" id="L508">					double tio = Double.parseDouble(String.valueOf(textField.getText()));</span>
+<span class="nc" id="L509">					textField.setText(String.valueOf(adv.tenX(tio)));</span>
+		        }
+<span class="nc" id="L511">		        catch (Exception d){</span>
+<span class="nc" id="L512">		            JOptionPane.showMessageDialog(null, &quot;Felmeddelande! Du har fyllt i något fel. Försök igen&quot;);</span>
+<span class="nc" id="L513">		        }</span>
+				
+<span class="nc" id="L515">			}</span>
+		});
+<span class="nc" id="L517">		btn_tio.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 11));</span>
+<span class="nc" id="L518">		btn_tio.setBounds(385, 207, 52, 39);</span>
+<span class="nc" id="L519">		frmLindasKalkylator.getContentPane().add(btn_tio);</span>
+<span class="nc" id="L520">		}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
