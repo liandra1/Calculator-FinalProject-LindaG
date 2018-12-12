@@ -2,58 +2,58 @@
 <testng-results skipped="0" failed="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="293" started-at="2018-12-12T13:01:02Z" finished-at="2018-12-12T13:01:03Z">
+  <suite name="Surefire suite" duration-ms="443" started-at="2018-12-12T14:02:08Z" finished-at="2018-12-12T14:02:08Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="293" started-at="2018-12-12T13:01:02Z" finished-at="2018-12-12T13:01:03Z">
+    <test name="Surefire test" duration-ms="443" started-at="2018-12-12T14:02:08Z" finished-at="2018-12-12T14:02:08Z">
       <class name="Calculator_Linda.Calculator_Linda.CalcAdvTest">
-        <test-method status="PASS" signature="testCos()[pri:0, instance:testCos(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testCos" duration-ms="44" started-at="2018-12-12T14:01:02Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testCos()[pri:0, instance:testCos(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testCos" duration-ms="55" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCos -->
-        <test-method status="PASS" signature="testSin()[pri:0, instance:testSin(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testSin" duration-ms="24" started-at="2018-12-12T14:01:03Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testSin()[pri:0, instance:testSin(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testSin" duration-ms="30" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSin -->
-        <test-method status="PASS" signature="testSqa()[pri:0, instance:testSqa(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testSqa" duration-ms="14" started-at="2018-12-12T14:01:03Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testSqa()[pri:0, instance:testSqa(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testSqa" duration-ms="34" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSqa -->
-        <test-method status="PASS" signature="testTan()[pri:0, instance:testTan(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testTan" duration-ms="16" started-at="2018-12-12T14:01:03Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testTan()[pri:0, instance:testTan(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testTan" duration-ms="41" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTan -->
-        <test-method status="PASS" signature="testTenX()[pri:0, instance:testTenX(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testTenX" duration-ms="9" started-at="2018-12-12T14:01:03Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testTenX()[pri:0, instance:testTenX(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testTenX" duration-ms="23" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTenX -->
-        <test-method status="PASS" signature="testPi()[pri:0, instance:testPi(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testPi" duration-ms="14" started-at="2018-12-12T14:01:03Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testPi()[pri:0, instance:testPi(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testPi" duration-ms="25" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPi -->
-        <test-method status="PASS" signature="testX2()[pri:0, instance:testX2(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testX2" duration-ms="7" started-at="2018-12-12T14:01:03Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testX2()[pri:0, instance:testX2(Calculator_Linda.Calculator_Linda.CalcAdvTest)]" name="testX2" duration-ms="11" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testX2 -->
       </class> <!-- Calculator_Linda.Calculator_Linda.CalcAdvTest -->
       <class name="Calculator_Linda.Calculator_Linda.CalcBasicTest">
-        <test-method status="PASS" signature="testAdd()[pri:0, instance:testAdd(Calculator_Linda.Calculator_Linda.CalcBasicTest)]" name="testAdd" duration-ms="17" started-at="2018-12-12T14:01:03Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testAdd()[pri:0, instance:testAdd(Calculator_Linda.Calculator_Linda.CalcBasicTest)]" name="testAdd" duration-ms="30" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAdd -->
-        <test-method status="PASS" signature="testDiv()[pri:0, instance:testDiv(Calculator_Linda.Calculator_Linda.CalcBasicTest)]" name="testDiv" duration-ms="18" started-at="2018-12-12T14:01:03Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testDiv()[pri:0, instance:testDiv(Calculator_Linda.Calculator_Linda.CalcBasicTest)]" name="testDiv" duration-ms="30" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDiv -->
-        <test-method status="PASS" signature="testSub()[pri:0, instance:testSub(Calculator_Linda.Calculator_Linda.CalcBasicTest)]" name="testSub" duration-ms="17" started-at="2018-12-12T14:01:03Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testSub()[pri:0, instance:testSub(Calculator_Linda.Calculator_Linda.CalcBasicTest)]" name="testSub" duration-ms="26" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSub -->
-        <test-method status="PASS" signature="testMult()[pri:0, instance:testMult(Calculator_Linda.Calculator_Linda.CalcBasicTest)]" name="testMult" duration-ms="12" started-at="2018-12-12T14:01:03Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testMult()[pri:0, instance:testMult(Calculator_Linda.Calculator_Linda.CalcBasicTest)]" name="testMult" duration-ms="16" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMult -->
-        <test-method status="PASS" signature="testModulus()[pri:0, instance:testModulus(Calculator_Linda.Calculator_Linda.CalcBasicTest)]" name="testModulus" duration-ms="14" started-at="2018-12-12T14:01:03Z" finished-at="2018-12-12T14:01:03Z">
+        <test-method status="PASS" signature="testModulus()[pri:0, instance:testModulus(Calculator_Linda.Calculator_Linda.CalcBasicTest)]" name="testModulus" duration-ms="20" started-at="2018-12-12T15:02:08Z" finished-at="2018-12-12T15:02:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testModulus -->

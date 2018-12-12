@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="0.367" tests="12" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="1.194" tests="12" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin"/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_171\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -U"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -65,16 +65,16 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testCos on testCos(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.053"/>
-  <testcase name="testSin on testSin(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.048"/>
-  <testcase name="testSqa on testSqa(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.05"/>
-  <testcase name="testTan on testTan(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.046"/>
-  <testcase name="testTenX on testTenX(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.046"/>
-  <testcase name="testPi on testPi(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.024"/>
-  <testcase name="testX2 on testX2(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.005"/>
-  <testcase name="testAdd on testAdd(Calculator_Linda.Calculator_Linda.CalcBasicTest)" classname="Calculator_Linda.Calculator_Linda.CalcBasicTest" time="0.023"/>
-  <testcase name="testDiv on testDiv(Calculator_Linda.Calculator_Linda.CalcBasicTest)" classname="Calculator_Linda.Calculator_Linda.CalcBasicTest" time="0.021"/>
-  <testcase name="testSub on testSub(Calculator_Linda.Calculator_Linda.CalcBasicTest)" classname="Calculator_Linda.Calculator_Linda.CalcBasicTest" time="0.02"/>
-  <testcase name="testMult on testMult(Calculator_Linda.Calculator_Linda.CalcBasicTest)" classname="Calculator_Linda.Calculator_Linda.CalcBasicTest" time="0.013"/>
-  <testcase name="testModulus on testModulus(Calculator_Linda.Calculator_Linda.CalcBasicTest)" classname="Calculator_Linda.Calculator_Linda.CalcBasicTest" time="0.018"/>
+  <testcase name="testCos on testCos(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.075"/>
+  <testcase name="testSin on testSin(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.105"/>
+  <testcase name="testSqa on testSqa(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.083"/>
+  <testcase name="testTan on testTan(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.067"/>
+  <testcase name="testTenX on testTenX(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.064"/>
+  <testcase name="testPi on testPi(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.056"/>
+  <testcase name="testX2 on testX2(Calculator_Linda.Calculator_Linda.CalcAdvTest)" classname="Calculator_Linda.Calculator_Linda.CalcAdvTest" time="0.052"/>
+  <testcase name="testAdd on testAdd(Calculator_Linda.Calculator_Linda.CalcBasicTest)" classname="Calculator_Linda.Calculator_Linda.CalcBasicTest" time="0.128"/>
+  <testcase name="testDiv on testDiv(Calculator_Linda.Calculator_Linda.CalcBasicTest)" classname="Calculator_Linda.Calculator_Linda.CalcBasicTest" time="0.141"/>
+  <testcase name="testSub on testSub(Calculator_Linda.Calculator_Linda.CalcBasicTest)" classname="Calculator_Linda.Calculator_Linda.CalcBasicTest" time="0.137"/>
+  <testcase name="testMult on testMult(Calculator_Linda.Calculator_Linda.CalcBasicTest)" classname="Calculator_Linda.Calculator_Linda.CalcBasicTest" time="0.105"/>
+  <testcase name="testModulus on testModulus(Calculator_Linda.Calculator_Linda.CalcBasicTest)" classname="Calculator_Linda.Calculator_Linda.CalcBasicTest" time="0.181"/>
 </testsuite>
